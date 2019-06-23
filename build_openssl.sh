@@ -12,8 +12,8 @@ cd openssl-1.1.1c
 make clean
 make depend
 make install
-cp libssl.so.1.1 $PWD/../linux/openssl/libssl.so
-cp libcrypto.so.1.1. $PWD/../linux/openssl/libscrypto.so
+cp libssl.so.1.1 $PWD/../linux/openssl/lib/libssl.so
+cp libcrypto.so.1.1. $PWD/../linux/openssl/lib/libscrypto.so
 }
 
 build_one
