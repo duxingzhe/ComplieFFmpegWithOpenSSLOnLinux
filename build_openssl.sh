@@ -11,9 +11,10 @@ cd openssl-1.1.1c
 
 make clean
 make depend
-make install
-cp libssl.so.1.1 $PWD/../linux/openssl/lib/libssl.so
-cp libcrypto.so.1.1. $PWD/../linux/openssl/lib/libscrypto.so
+make CALC_VERSIONS="SHLIB_COMPAT=; SHLIB_SOVER=" MAKE="make -e" all
+echo "place-holder make target for avoiding symlinks" >> $PWD/../linux/openssl/lib/link-shared
+make SHLIB_EXT=.so install_sw
+
 }
 
 build_one
